@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Racial breakdown of students since 1969</title>
+  <meta name="viewport" content="width=device-width">
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <link rel=StyleSheet href="style.css" type="text/css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js"></script>
+  <!--[if lte IE 8]>
+  <link rel=StyleSheet href="http://projects.ctmirror.org/libs/leaflet/leaflet.ie.css" type="text/css">
+  <![endif]-->
+  <script type="text/javascript" src="ctborders.js"></script>
+  <script type="text/javascript" src="data.js"></script>
+  <script type="text/javascript" src="init.js"></script>
+  <link rel=StyleSheet href="http://projects.ctmirror.org/libs/universal.css" type="text/css">
+</head>
+<body>
+
+  <div class="interactiveContainer">
+    <div class="graphicHeader">Racial breakdown of students since 1969, by district</div>
+    <div class="explainer">A look at enrollment in Connecticut's public school districts since 1968. Note: Some data was unavailable. <i>A previous version of this graphic had the incorrect number of minority students listed for Waterbury in 1968.</i></div>
+    <div class="toolbar">
+      <div class="toolItem selected" rel="69">68-69</div>
+      <div class="toolItem" rel="82">82-83</div>
+      <!--       <div class="toolItem">77</div>  -->     
+      <div class="toolItem" rel="87">87-88</div>      
+      <div class="toolItem" rel="93">93-94</div>      
+      <div class="toolItem" rel="05">04-05</div>      
+      <div class="toolItem" rel="12">12-13</div>      
+    </div>
+    <div class="mapContainer">
+      <div id="map"></div>
+      <div class="searchContainer"><input type="text" id="search" value="Hartford"><div class="searchButton">Search</div><span class='error'></span>
+    </div>
+    <img class="legend" src="legend.png"/>
+  </div>
+  <div class="entireChart">
+  <div class="chartTop">
+    <div class="chartName"></div>
+    <div class="chartLegend">
+      <div class="chartLegendItem"><span id="whiteDotLeg"></span>White</div>
+      <div class="chartLegendItem"><span id="minDotLeg"></span>Minority</div>
+    </div>
+  </div>
+  <div class="graphContainer">
+    <div class="mainChart">
+      <div class="tickLine" id="tick0"></div>
+      <div class="tickLine" id="tick1"></div>
+      <div class="tickLine" id="tick2"></div>
+      <div class="tickLine" id="tick3"></div>
+      <div class="tickLine" id="tick4">0 Students</div>
+    </div>
+    <div class="bottomChart">
+      <div class="bottomItem" id="block0">68-69</div>
+      <div class="bottomItem" id="block1">82-83</div>
+      <div class="bottomItem" id="block2">87-88</div>
+      <div class="bottomItem" id="block3">93-94</div>
+      <div class="bottomItem" id="block4">04-05</div>
+      <div class="bottomItem" id="block5">12-13</div>
+    </div>
+  </div>
+  </div>
+  <div class="sourceline">Source: Department of Education report "Minority Pupils and Staff in Connecticut Public Schools"; Department of Education. All data is from the fall semester.</div>
+  <div class="smallByline">Alvin Chang / CT Mirror</div>
+</div>
+
+</body>
+</html>
